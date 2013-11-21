@@ -1,0 +1,5 @@
+lua_load ~/conky/new/script.lua
+lua_draw_hook_post main
+
+TEXT
+

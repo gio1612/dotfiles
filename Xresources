@@ -1,0 +1,67 @@
+URxvt.iconFile: /home/gio/.icons/terminal.png
+URxvt.transparent: false
+!URxvt.shading: 40  // 0 to 99 darkens, 101 to 200 lightens
+
+URxvt.font: xft:Mono:size=10
+
+URxvt.perl-ext-common:default,url-select,keyboard-select,clipboard,tabbedex
+URxvt.keysym.M-u:perl:url-select:select_next
+URxvt.keysym.M-slash:  perl:aAtt:complete
+URxvt.urlLauncher:chromium
+URvxt.url-select.button: 1
+URxvt.underlineURLs:true
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.clipboard.copycmd:    xsel -ib
+URxvt.clipboard.pastecmd:   xsel -ob
+! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+URxvt.scrollstyle: plain
+URxvt.scrollBar: true
+!AMBIANCE
+URxvt*background:       #2B2B2B
+URxvt.foreground:        #F2F1F0
+!URxvt.cursorColor:       #F07746
+URxvt.cursorColor:       #C1C9C9
+URxvt.cursorBlink:		true
+
+!black
+*color0: #222222
+*color8: #666666
+!red
+!*color1: #E84F4F
+!*color9: #D23D3D
+*color1: #CC0000
+*color9: #EF2929
+!green
+!*color2: #1DCA00
+!*color10: #49EE89
+*color2:  #4E9A06
+*color10: #8AE234
+!yellow
+*color3: #C4A000
+*color11: #FCE94F
+!*color4: #F4FA4F
+!*color12: #FAE44F
+!blue
+*color4: #3465A4
+*color12: #729FCF
+!*color3: #0B67CB
+!*color11: #2AE6FF
+!magenta
+!*color5: #B7416E
+!*color13: #E16A98
+*color5: #75507B
+*color13: #AD7FA8
+!cyan
+!*color6: #6D878D
+!*color14: #42717B
+*color6: #06989A
+*color14: #34E2E2
+!white
+!*color7: #F2F1F0
+!*color15: #F2F1F0
+*color7: #D3D7CF
+*color15: #ECEDEE
+

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<item icon="/home/gio/.icons/openbox/Command_Prompt.png" label="Terminal">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+		<item icon="/home/gio/.icons/openbox/chromium.png" label="Internet">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
+		<item icon="/home/gio/.icons/openbox/explorer.png" label="Files">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<separator/>
+		<item icon="/home/gio/.icons/openbox/documents.png" label="Documents">
+			<action name="Execute">
+				<execute>pcmanfm ~/Documents</execute>
+			</action>
+		</item>
+		<item icon="/home/gio/.icons/openbox/pictures.png" label="Pictures">
+			<action name="Execute">
+				<execute>pcmanfm ~/Pictures</execute>
+			</action>
+		</item>
+		<item icon="/home/gio/.icons/openbox/music.png" label="Music">
+			<action name="Execute">
+				<execute>pcmanfm ~/Music</execute>
+			</action>
+		</item>
+		<item icon="/home/gio/.icons/openbox/folder_yellow.png" label="Downloads">
+			<action name="Execute">
+				<execute>pcmanfm ~/Downloads</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="Apps" label="Apps.">
+			<menu icon="/home/gio/.icons/openbox/applications-development.png" id="1" label="Development">
+				<item icon="/home/gio/.icons/openbox/MySQLWorkbench-32.png" label="MySQL Workbench">
+					<action name="Execute">
+						<execute>mysql-workbench</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/pgadmin.png" label="PgAdmin3">
+					<action name="Execute">
+						<execute>pgadmin3</execute>
+					</action>
+				</item>
+				<item label="OpenJDK Monitoring &amp; Management Console">
+					<action name="Execute">
+						<execute>jconsole</execute>
+					</action>
+				</item>
+				<item label="OpenJDK Policy Tool">
+					<action name="Execute">
+						<execute>policytool</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/python.png" label="Python">
+					<action name="Execute">
+						<execute>urxvt -e python</execute>
+					</action>
+				</item>
+				<item label="Qt4 Assistant">
+					<action name="Execute">
+						<execute>assistant-qt4</execute>
+					</action>
+				</item>
+				<item label="Qt4 Designer">
+					<action name="Execute">
+						<execute>designer-qt4</execute>
+					</action>
+				</item>
+				<item label="Qt4 Linguist">
+					<action name="Execute">
+						<execute>linguist-qt4</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/virtualbox.png" label="Virtrual Box">
+					<action name="Execute">
+						<execute>virtualbox</execute>
+					</action>
+				</item>
+			</menu>
+			<menu icon="/home/gio/.icons/openbox/applications-publishing.png" id="2" label="Editors">
+				<item icon="/home/gio/.icons/openbox/SublimeText2.png" label="Sublime Text 2">
+					<action name="Execute">
+						<execute>sublime_text</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/notes.png" label="gedit">
+					<action name="Execute">
+						<execute>gedit</execute>
+					</action>
+				</item>
+			</menu>
+			<menu icon="/home/gio/.icons/openbox/applications-graphics.png" id="6" label="Graphics">
+				<item icon="/home/gio/.icons/openbox/GIMP.png" label="GIMP">
+					<action name="Execute">
+						<execute>gimp-2.8</execute>
+					</action>
+				</item>
+			</menu>
+			<menu icon="/home/gio/.icons/openbox/applications-multimedia.png" id="7" label="Multimedia">
+				<item label="ALSA mixer">
+					<action name="Execute">
+						<execute>urxvt -e alsamixer</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/cheese.png" label="Cheese">
+					<action name="Execute">
+						<execute>cheese</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/rhythmbox.png" label="Rhythmbox">
+					<action name="Execute">
+						<execute>rhythmbox</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/webcam.png" label="Video4Linux Device Preferences">
+					<action name="Execute">
+						<execute>gtk-v4l</execute>
+					</action>
+				</item>
+				<item label="GrooveDown">
+					<action name="Execute">
+						<execute>groovedown</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/vlc.png" label="VLC media player">
+					<action name="Execute">
+						<execute>vlc</execute>
+					</action>
+				</item>
+			</menu>
+			<menu icon="/home/gio/.icons/openbox/applications-internet.png" id="5" label="Network">
+				<item label="Avahi SSH Server Browser">
+					<action name="Execute">
+						<execute>bssh</execute>
+					</action>
+				</item>
+				<item label="Avahi VNC Server Browser">
+					<action name="Execute">
+						<execute>bvnc</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/chromium.png" label="Chromium">
+					<action name="Execute">
+						<execute>chromium</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/firefox.png" label="FireFox">
+					<action name="Execute">
+						<execute>firefox</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/Pidgin.png" label="Pidgin Internet Messenger">
+					<action name="Execute">
+						<execute>pidgin</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/skype.png" label="Skype">
+					<action name="Execute">
+						<execute>skype</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/transmission.png" label="Transmission">
+					<action name="Execute">
+						<execute>transmission-gtk</execute>
+					</action>
+				</item>
+			</menu>
+			<menu icon="/home/gio/.icons/openbox/applications-office.png" id="3" label="Office">
+				<item icon="/home/gio/.icons/openbox/acrobat.png" label="Evince">
+					<action name="Execute">
+						<execute>evince</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/libreoffice-main.png" label="LibreOffice">
+					<action name="Execute">
+						<execute>libreoffice</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/libreoffice-writer.png" label="Writer">
+					<action name="Execute">
+						<execute>libreoffice --writer</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/libreoffice-calc.png" label="Calc">
+					<action name="Execute">
+						<execute>libreoffice --calc</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/libreoffice-base.png" label="Base">
+					<action name="Execute">
+						<execute>libreoffice --base</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/libreoffice-impress.png" label="Impress">
+					<action name="Execute">
+						<execute>libreoffice --impress</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/openbox/libreoffice-base.png" label="Draw">
+					<action name="Execute">
+						<execute>libreoffice --draw</execute>
+					</action>
+				</item>
+			</menu>
+			<menu icon="/home/gio/.icons/openbox/applications-other.png" id="39" label="Other">
+				<item label="IBus Preferences">
+					<action name="Execute">
+						<execute>ibus-setup</execute>
+					</action>
+				</item>
+				<item label="QT V4L2 test Utility">
+					<action name="Execute">
+						<execute>qv4l2</execute>
+					</action>
+				</item>
+			</menu>
+			<menu icon="/home/gio/.icons/openbox/applications-science.png" id="4" label="Science">
+				<item label="bc">
+					<action name="Execute">
+						<execute>xterm -e bc</execute>
+					</action>
+				</item>
+				<item label="dc">
+					<action name="Execute">
+						<execute>xterm -e dc</execute>
+					</action>
+				</item>
+				<item label="Genius Math Tool">
+					<action name="Execute">
+						<execute>gnome-genius</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="19" label="Shells">
+				<item label="GIT">
+					<action name="Execute">
+						<execute>urxvt -e git</execute>
+					</action>
+				</item>
+				<item label="UXTerm">
+					<action name="Execute">
+						<execute>uxterm</execute>
+					</action>
+				</item>
+				<item label="Xterm">
+					<action name="Execute">
+						<execute>xterm</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu icon="/home/gio/.icons/openbox/applications-system.png" id="37" label="System">
+			<menu execute="python2.7 ~/.config/openbox/ob-randr.py" id="randr-menu" label="Display"/>
+			<menu id="37-434659" label="Auto Standby">
+				<item label="Enable">
+					<action name="Execute">
+						<execute>~/bin/monitor-on</execute>
+					</action>
+				</item>
+				<item label="Disable">
+					<action name="Execute">
+						<execute>~/bin/monitor-off</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="36" label="Settings">
+				<item label="Manage Printing">
+					<action name="Execute">
+						<execute>xdg-open http://localhost:631/</execute>
+					</action>
+				</item>
+				<item icon="/home/gio/.icons/Plex/pngs/Other/dropbox.png" label="Openbox Configuration Manager">
+					<action name="Execute">
+						<execute>obconf</execute>
+					</action>
+				</item>
+				<item label="Panel tint2">
+					<action name="Execute">
+						<execute>tint2conf</execute>
+					</action>
+				</item>
+				<item label="Print Settings">
+					<action name="Execute">
+						<execute>system-config-printer</execute>
+					</action>
+				</item>
+				<item label="User Accounts">
+					<action name="Execute">
+						<execute>gnome-control-center user-accounts</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Avahi Zeroconf Browser">
+				<action name="Execute">
+					<execute>avahi-discover</execute>
+				</action>
+			</item>
+			<item label="Configuration Editor">
+				<action name="Execute">
+					<execute>gconf-editor</execute>
+				</action>
+			</item>
+			<item label="dconf Editor">
+				<action name="Execute">
+					<execute>dconf-editor</execute>
+				</action>
+			</item>
+			<item label="IBus">
+				<action name="Execute">
+					<execute>ibus-daemon --xim</execute>
+				</action>
+			</item>
+			<item label="LSHW">
+				<action name="Execute">
+					<execute>gtk-lshw</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="38" label="Utilities">
+			<item label="7-Zip FM">
+				<action name="Execute">
+					<execute>7zFM</execute>
+				</action>
+			</item>
+			<item label="Calculator">
+				<action name="Execute">
+					<execute>gcalctool</execute>
+				</action>
+			</item>
+			<item label="Caribou">
+				<action name="Execute">
+					<execute>caribou</execute>
+				</action>
+			</item>
+			<item label="Character Map">
+				<action name="Execute">
+					<execute>gucharmap</execute>
+				</action>
+			</item>
+			<item label="HP Device Manager">
+				<action name="Execute">
+					<execute>hp-toolbox</execute>
+				</action>
+			</item>
+			<item label="Synergy">
+				<action name="Execute">
+					<execute>synergy</execute>
+				</action>
+			</item>
+			<item label="Xrefresh">
+				<action name="Execute">
+					<execute>xrefresh</execute>
+				</action>
+			</item>
+			<item label="Xsetroot">
+				<action name="Execute">
+					<execute>xsetroot</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="40" label="OpenBox">
+			<menu id="client-list-menu"/>
+			<item label="Gtk widget">
+				<action name="Execute">
+					<execute>gtk3-widget-factory</execute>
+				</action>
+			</item>
+			<item label="Appearance">
+				<action name="Execute">
+					<execute>lxappearance</execute>
+				</action>
+			</item>
+			<item label="ObMenu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<separator/>
+			<item label="Exit">
+				<action name="Execute">
+					<execute>oblogout</execute>
+				</action>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>
