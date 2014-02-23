@@ -16,9 +16,12 @@
 #
 #xfce-mcs-manager &
 setxkbmap es &
-conky -c ~/conky/conkyrc & 
+conky -c ~/conky/conky_light/.conkyrc & 
 tint2 &
 volumeicon &
-nitrogen --restore &
+#nitrogen --restore &
+pcmanfm --desktop &
+sleep 1s
+pcmanfm --set-wallpaper=/home/gio/Pictures/the_phone.jpg
 xrdb .Xresources &
 mpd

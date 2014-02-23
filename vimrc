@@ -3,7 +3,6 @@ autocmd! bufwritepost .vimrc source %
 
 set mouse=a  " on OSX press ALT and click
 set bs=2     " make bckspace behave like normal again
-
 " Rebind <Leader> key
 " I like to have it here becuase it is easier to reach than the default and
 " it is next to ``m`` and ``n`` which I use for navigating between tabs.
@@ -13,13 +12,13 @@ let mapleader = ","
 " Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+"noremap <C-n> :nohl<CR>
+"vnoremap <C-n> :nohl<CR>
+"inoremap <C-n> :nohl<CR>
 
 
 " Quicksave command
-noremap <C-s> :update<CR>
+noremap <Leader>w :update<CR>
 noremap <C-w> :wq<CR>
 inoremap <C-s> <C-o>:update<CR>
 inoremap <C-w> <esc>:wq<CR>
@@ -37,11 +36,6 @@ map <tab>l <c-w>l
 map <tab>h <c-w>h
 
 
-"Turn off arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
 
 "Move in the insert mode
 imap <A-h> <left>
@@ -108,6 +102,8 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
+set clipboard=unnamedplus
+
 
 " Make search case insensitive
 set hlsearch
@@ -170,6 +166,7 @@ set wildignore+=*/coverage/*
 " Settings for jedi-vim
 " cd ~/.vim/bundle
 " git clone git://github.com/davidhalter/jedi-vim.git
+let g:jedi#completions_command = "<C-Space>"
 let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0

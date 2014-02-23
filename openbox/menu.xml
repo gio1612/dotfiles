@@ -175,6 +175,11 @@
 				</item>
 			</menu>
 			<menu icon="/home/gio/.icons/openbox/applications-office.png" id="3" label="Office">
+				<item icon="/home/gio/.icons/openbox/thunderbird.png" label="Thunderbird">
+					<action name="Execute">
+						<execute>thunderbird</execute>
+					</action>
+				</item>
 				<item icon="/home/gio/.icons/openbox/acrobat.png" label="Evince">
 					<action name="Execute">
 						<execute>evince</execute>
