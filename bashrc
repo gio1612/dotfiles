@@ -51,7 +51,9 @@ export LESS="-R"
 #		LESS_TERMCAP_ue=$(printf "\e[0m") \
 #		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 #			man "$@"
-PATH=$PATH:$HOME/bin:$HOME/android-sdk/platform-tools/
+PATH=$PATH:$HOME/bin:$HOME/android/android-sdk/platform-tools/:$HOME/android/android-sdk/tools/
+PATH=$PATH:$HOME/android/android-studio/bin/
+
 export PATH
 export LANG=es_ES.utf8
 

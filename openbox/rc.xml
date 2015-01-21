@@ -43,7 +43,7 @@
   </placement>
   <theme>
     <!--name>Bear2</name-->
-    <name>Syscrash</name>
+    <name>Numix-ArchBlue</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -227,17 +227,12 @@
     </keybind>
     <keybind key="W-b">
       <action name="Execute">
-        <command>firefox</command>
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
         <command>thunderbird</command>
-      </action>
-    </keybind>
-    <keybind key="W-d">
-      <action name="Execute">
-        <command>pidgin</command>
       </action>
     </keybind>
     <keybind key="Print">
@@ -320,6 +315,15 @@
     </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
+    </keybind>
+    <keybind key="W-x">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>oblogut</name>
+        </startupnotify>
+        <command>oblogout</command>
+      </action>
     </keybind>
   </keyboard>
   <mouse>

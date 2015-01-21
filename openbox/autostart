@@ -16,12 +16,13 @@
 #
 #xfce-mcs-manager &
 setxkbmap es &
-conky -c ~/conky/conky_light/.conkyrc & 
+conky -c ~/conky/conkyrc_arch_theme & 
+cp ~/dotfiles/asoundrc ~/.asoundrc &
 tint2 &
 volumeicon &
 #nitrogen --restore &
 pcmanfm --desktop &
-sleep 1s
-pcmanfm --set-wallpaper=/home/gio/Pictures/the_phone.jpg
+sleep 5s
+pcmanfm --set-wallpaper=/home/gio/Pictures/broken_PS3.jpg
 xrdb .Xresources &
 mpd
