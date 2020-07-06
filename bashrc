@@ -4,7 +4,7 @@
 
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
-
+#[[ $TERM != "screen" ]] && exec tmux
 #comandos modificados
 alias ls='ls --color=auto'
 alias diff='colordiff'
@@ -12,6 +12,7 @@ alias df='df -h'
 alias du='du -c -h'
 alias ..='cd ..'
 alias ls='ls -hF --color=auto'
+alias ll='ls -la --color=auto'
 alias rm='rm -i'
 alias vi='vim'
 
@@ -51,8 +52,6 @@ export LESS="-R"
 #		LESS_TERMCAP_ue=$(printf "\e[0m") \
 #		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 #			man "$@"
-PATH=$PATH:$HOME/bin:$HOME/android/android-sdk/platform-tools/:$HOME/android/android-sdk/tools/
-PATH=$PATH:$HOME/android/android-studio/bin/
 
 export PATH
 export LANG=es_ES.utf8
