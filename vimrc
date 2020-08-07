@@ -3,8 +3,8 @@ syntax on
 set relativenumber
 set nohlsearch
 set hidden
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set nu
@@ -39,3 +39,9 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 set t_Co=256
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+set laststatus=2
