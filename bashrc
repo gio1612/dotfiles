@@ -62,3 +62,6 @@ export LESS="-R"
 
 export PATH
 export LANG=es_ES.utf8
+
+eval ``keychain --eval --agents ssh id_rsa
+eval ``keychain --eval --agents ssh github
