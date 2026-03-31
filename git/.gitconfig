@@ -1,0 +1,72 @@
+[user]
+	name = Giovanny Tomazzolli
+	email = tomazzolli.gti@gmail.com
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
+
+# Machine-specific overrides (signingkey, gpg.ssh.program path)
+# Each machine has a ~/.gitconfig.local — never committed to the repo
+[include]
+	path = ~/.gitconfig.local
+
+[core]
+	pager = delta
+	autocrlf = input
+	editor = nvim
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	dark = true
+	line-numbers = true
+	side-by-side = false
+
+[pull]
+	rebase = true
+
+[push]
+	default = current
+
+[init]
+	defaultBranch = main
+
+[rebase]
+	autoStash = true
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[alias]
+	lg = log --oneline --graph --decorate --all
+	st = status -sb
+	co = checkout
+	br = branch
