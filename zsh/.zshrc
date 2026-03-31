@@ -2,16 +2,23 @@
 
 # ── 1Password SSH agent bridge ────────────────────────────────────────────────
 # Bridges the Windows 1Password SSH agent into WSL2 via npiperelay + socat.
-# Requires: npiperelay.exe on Windows PATH, socat installed in Arch.
-# After wsl --shutdown + relaunch, all SSH auth flows through 1Password.
+# Falls back to checking common WinGet/Scoop locations if not on PATH.
 export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
-if ! ss -ax 2>/dev/null | grep -q "${SSH_AUTH_SOCK}" || ! ssh-add -l &>/dev/null; then
-  rm -f "${SSH_AUTH_SOCK}"
-  ( setsid socat \
-      UNIX-LISTEN:"${SSH_AUTH_SOCK}",fork \
-      EXEC:"npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork \
-    & ) 2>/dev/null
+_NPIPERELAY=$(command -v npiperelay.exe 2>/dev/null \
+  || echo "/mnt/c/Users/work/AppData/Local/Microsoft/WinGet/Links/npiperelay.exe")
+
+if [[ -x "$_NPIPERELAY" ]]; then
+  if ! ss -ax 2>/dev/null | grep -q "${SSH_AUTH_SOCK}" || ! ssh-add -l &>/dev/null; then
+    rm -f "${SSH_AUTH_SOCK}"
+    ( setsid socat \
+        UNIX-LISTEN:"${SSH_AUTH_SOCK}",fork \
+        EXEC:"${_NPIPERELAY} -ei -s //./pipe/openssh-ssh-agent",nofork \
+      & ) 2>/dev/null
+  fi
+else
+  echo "[warn] npiperelay.exe not found — 1Password SSH agent bridge inactive"
 fi
+unset _NPIPERELAY
 
 # ── zinit ─────────────────────────────────────────────────────────────────────
 ZINIT_HOME="${XDG_DATA_HOME}/zinit/zinit.git"
@@ -98,4 +105,11 @@ fi
 # ── Starship prompt ───────────────────────────────────────────────────────────
 if command -v starship &>/dev/null; then
   eval "$(starship init zsh)"
+fi
+
+# fnm
+FNM_PATH="/home/gio/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
 fi
