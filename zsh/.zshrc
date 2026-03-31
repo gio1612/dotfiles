@@ -5,7 +5,7 @@
 # Requires: npiperelay.exe on Windows PATH, socat installed in Arch.
 # After wsl --shutdown + relaunch, all SSH auth flows through 1Password.
 export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
-if ! ss -a 2>/dev/null | grep -q "${SSH_AUTH_SOCK}"; then
+if ! ss -ax 2>/dev/null | grep -q "${SSH_AUTH_SOCK}" || ! ssh-add -l &>/dev/null; then
   rm -f "${SSH_AUTH_SOCK}"
   ( setsid socat \
       UNIX-LISTEN:"${SSH_AUTH_SOCK}",fork \
