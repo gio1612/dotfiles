@@ -38,9 +38,14 @@ opt.signcolumn     = "yes"
 opt.swapfile       = false
 opt.backup         = false
 opt.undofile       = true
-opt.undodir        = vim.fn.expand("~/.vim/undodir")
+opt.undodir        = vim.fn.stdpath("data") .. "/undodir"
 
 opt.termguicolors  = true
+opt.splitright     = true
+opt.splitbelow     = true
+opt.cursorline     = true
+opt.list           = true
+opt.listchars      = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Leader key
 vim.g.mapleader = " "
@@ -63,9 +68,20 @@ map("n", "<C-l>", "<C-w>l")
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
--- Keep cursor centered on search
-map("n", "n", "nzzzv")
-map("n", "N", "Nzzzv")
+-- Keep cursor centered on search and half-page scroll
+map("n", "n",     "nzzzv")
+map("n", "N",     "Nzzzv")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+
+-- Paste without clobbering the yank register
+map("x", "<leader>p", '"_dP')
+
+-- Yank to system clipboard
+map({ "n", "v" }, "<leader>y", '"+y')
+
+-- Delete to black hole register (don't pollute " register)
+map({ "n", "v" }, "<leader>d", '"_d')
 
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
@@ -75,5 +91,5 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -- LSP (set in lsp config, but leader shortcuts here)
 map("n", "<leader>e", vim.diagnostic.open_float)
-map("n", "[d", vim.diagnostic.goto_prev)
-map("n", "]d", vim.diagnostic.goto_next)
+map("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end)
+map("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end)
