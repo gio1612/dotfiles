@@ -5,7 +5,7 @@
 # Falls back to checking common WinGet/Scoop locations if not on PATH.
 export SSH_AUTH_SOCK="${HOME}/.ssh/agent.sock"
 _NPIPERELAY=$(command -v npiperelay.exe 2>/dev/null \
-  || echo "/mnt/c/Users/work/AppData/Local/Microsoft/WinGet/Links/npiperelay.exe")
+  || echo "/mnt/c/Users/GiovannyTomazzolli/AppData/Local/Microsoft/WinGet/Links/npiperelay.exe")
 
 if [[ -x "$_NPIPERELAY" ]]; then
   if ! ss -ax 2>/dev/null | grep -q "${SSH_AUTH_SOCK}" || ! ssh-add -l &>/dev/null; then
@@ -19,6 +19,10 @@ else
   echo "[warn] npiperelay.exe not found — 1Password SSH agent bridge inactive"
 fi
 unset _NPIPERELAY
+
+# ── Default editor ───────────────────────────────────────────────────────────
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # ── zinit ─────────────────────────────────────────────────────────────────────
 ZINIT_HOME="${XDG_DATA_HOME}/zinit/zinit.git"
